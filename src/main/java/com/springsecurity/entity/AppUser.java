@@ -22,32 +22,36 @@ public class AppUser implements UserDetails{
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        SimpleGrantedAuthority authority = new SimpleGrantedAuthority(this.role.toUpperCase());
-        return Collections.singletonList(authority);
+        return Collections.singletonList(new SimpleGrantedAuthority(this.role.toUpperCase()));
+    }
+
+    @Override
+    public String getPassword() {
+        return password;
     }
 
     @Override
     public String getUsername() {
-        return this.getEmail();
+        return this.email;
     }
 
     @Override
     public boolean isAccountNonExpired() {
-        return UserDetails.super.isAccountNonExpired();
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return UserDetails.super.isAccountNonLocked();
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return UserDetails.super.isCredentialsNonExpired();
+        return true;
     }
 
     @Override
     public boolean isEnabled() {
-        return UserDetails.super.isEnabled();
+        return true;
     }
 }

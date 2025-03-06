@@ -8,6 +8,7 @@ import lombok.*;
 @Getter
 @Builder
 public class AppUserRequest {
+    private Integer id;
     private String name;
     private String email;
     private String password;
