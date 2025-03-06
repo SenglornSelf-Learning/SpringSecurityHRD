@@ -1,4 +1,4 @@
-package com.springsecurity.entity.userIinMemory;
+package com.springsecurity.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

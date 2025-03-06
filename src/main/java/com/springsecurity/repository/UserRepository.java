@@ -1,6 +1,6 @@
-package com.springsecurity.repository.userIinMemory;
+package com.springsecurity.repository;
 
-import com.springsecurity.entity.userIinMemory.AppUser;
+import com.springsecurity.entity.AppUser;
 import org.apache.ibatis.annotations.*;
 
 @Mapper

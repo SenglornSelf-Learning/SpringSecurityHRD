@@ -1,4 +1,4 @@
-package com.springsecurity.entity.userIinMemory;
+package com.springsecurity.entity;
 
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;

@@ -1,9 +1,9 @@
-package com.springsecurity.service.userIinMemory;
+package com.springsecurity.service;
 
-import com.springsecurity.entity.userIinMemory.AppUser;
-import com.springsecurity.entity.userIinMemory.AppUserDTO;
-import com.springsecurity.entity.userIinMemory.AppUserRequest;
-import com.springsecurity.repository.userIinMemory.UserRepository;
+import com.springsecurity.entity.AppUser;
+import com.springsecurity.entity.AppUserDTO;
+import com.springsecurity.entity.AppUserRequest;
+import com.springsecurity.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

@@ -1,10 +1,10 @@
-package com.springsecurity.controller.userIinMemory;
+package com.springsecurity.controller;
 
 
-import com.springsecurity.entity.userIinMemory.ApiResponse;
-import com.springsecurity.entity.userIinMemory.AppUserDTO;
-import com.springsecurity.entity.userIinMemory.AppUserRequest;
-import com.springsecurity.service.userIinMemory.UserService;
+import com.springsecurity.entity.ApiResponse;
+import com.springsecurity.entity.AppUserDTO;
+import com.springsecurity.entity.AppUserRequest;
+import com.springsecurity.service.UserService;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
