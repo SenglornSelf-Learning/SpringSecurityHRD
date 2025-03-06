@@ -1,4 +1,4 @@
-package com.springsecurity.entity;
+package com.springsecurity.entity.userIinMemory;
 
 import lombok.*;
 
