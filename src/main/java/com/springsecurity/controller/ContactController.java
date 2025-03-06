@@ -8,6 +8,6 @@ public class ContactController {
 
     @GetMapping("/contact")
     public String getContact(){
-        return "Here are the contact page";
+        return "Inquiry details are saved to the DB";
     }
 }

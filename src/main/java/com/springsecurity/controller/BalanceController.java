@@ -8,6 +8,6 @@ public class BalanceController {
 
     @GetMapping("/balance")
     public String getBalance(){
-        return "Here are the balance page";
+        return "Here are the balance details from the DB";
     }
 }

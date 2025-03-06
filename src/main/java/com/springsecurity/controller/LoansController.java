@@ -8,6 +8,6 @@ public class LoansController {
 
     @GetMapping("/loan")
     public String getLoan(){
-        return "Spring security Loan page";
+        return "Here are the loans details from the DB";
     }
 }

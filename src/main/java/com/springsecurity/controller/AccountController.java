@@ -8,6 +8,6 @@ public class AccountController {
 
     @GetMapping("/account")
     public String getAccount(){
-        return "Here are the account page";
+        return "Here are the account details from the DB";
     }
 }

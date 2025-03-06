@@ -8,6 +8,6 @@ public class NoticesController {
 
     @GetMapping("/notice")
     public String getNotice(){
-        return "Here are the notice page";
+        return "Here are the notices details from the DB";
     }
 }
