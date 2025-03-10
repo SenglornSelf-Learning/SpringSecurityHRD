@@ -4,6 +4,7 @@ import com.springsecurity.model.AppUser;
 import com.springsecurity.model.AppUserDTO;
 import com.springsecurity.model.AppUserRequest;
 import com.springsecurity.repository.UserRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -22,6 +23,7 @@ public class UserService implements UserDetailsService {
                 .orElseThrow(() -> new UsernameNotFoundException("User not found with email: " + email));
     }
 
+    @Transactional
     public AppUserDTO insertUser(AppUserRequest appUserRequest) {
         String hashedPassword = passwordEncoder.encode(appUserRequest.getPassword());
 
@@ -31,8 +33,9 @@ public class UserService implements UserDetailsService {
         appUser.setPassword(hashedPassword);
         appUser.setRole(appUserRequest.getRole());
 
-        userRepository.save(appUser);
+        AppUser savedUser = userRepository.save(appUser);
+        System.out.println("User saved with ID: " + savedUser.getId());
 
-        return new AppUserDTO(appUser.getId(), appUser.getName(), appUser.getEmail(), appUser.getRole());
+        return new AppUserDTO(savedUser.getId(), savedUser.getName(), savedUser.getEmail(), savedUser.getRole());
     }
 }

@@ -4,7 +4,6 @@ import com.springsecurity.model.ApiResponse;
 import com.springsecurity.model.AppUserDTO;
 import com.springsecurity.model.AppUserRequest;
 import com.springsecurity.service.UserService;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,9 +21,8 @@ public class UserAuthenticationController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<ApiResponse<AppUserDTO>> create(@RequestBody AppUserRequest appUserRequest) {
+    public ResponseEntity<?> create(@RequestBody AppUserRequest appUserRequest) {
         AppUserDTO appUserDTO = userService.insertUser(appUserRequest);
-
         ApiResponse<AppUserDTO> response = ApiResponse.<AppUserDTO>builder()
                 .message("SUCCESS")
                 .status(HttpStatus.OK)

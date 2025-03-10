@@ -1,15 +1,14 @@
 package com.springsecurity.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter
 @Getter
+@Builder
 public class AppUserRequest {
+    private Integer id;
     private String name;
     private String email;
     private String password;

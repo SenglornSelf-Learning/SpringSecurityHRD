@@ -1,10 +1,7 @@
 package com.springsecurity.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -12,10 +9,12 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.Collections;
 
-@NoArgsConstructor
 @AllArgsConstructor
-@Setter @Getter
+@NoArgsConstructor
+@Setter
+@Getter
 @Entity
+@Builder
 @Table(name = "users")
 public class AppUser implements UserDetails {
     @Id
